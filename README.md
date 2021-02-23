@@ -13,6 +13,12 @@ All this could be achieved without passing props of `matchedPath` and `unmatched
 
 ## How to start
 
+### GitHub Pages
+
+This example app is deployed on GitHub Pages:  
+https://woeps.github.io/routed-and-linked-react-app/
+### Locally
+
 - clone this repo
 - run `npm install`
 - run `npm run server`
