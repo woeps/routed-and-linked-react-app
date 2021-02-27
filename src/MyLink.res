@@ -6,12 +6,10 @@
  * The Link component allows you to navigate to the routes defined in your application.
  */
 @react.component
-let make = (~routerPrefixHack: string="", ~route, ~children) => {
-  // FIXME: routerPrefixHack-prop needs to be removed once the router is able to
-  //      detect the already matched part of the path
-  //      this is only a temprary workaround
-  let routerContext = React.useContext(Router.context)
-  let path = routerPrefixHack ++ routerContext.prefix ++ route
+let make = (~route, ~children) => {
+  let linkContext = React.useContext(MyLinkContextProvider.context)
+  let path = linkContext.prefix ++ route
+
   <a
     href=path
     onClick={event =>

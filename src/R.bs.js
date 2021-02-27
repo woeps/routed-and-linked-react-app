@@ -1,8 +1,1 @@
-'use strict';
-
-var Routes = require("@anuragsoni/routes/src/routes.bs.js");
-
-var link = Routes.sprintf;
-
-exports.link = link;
-/* Routes Not a pure module */
+/* This output is empty. Its source's type definitions, externals and/or unused code got optimized away. */

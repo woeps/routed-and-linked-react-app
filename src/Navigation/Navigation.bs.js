@@ -11,8 +11,6 @@ var ul_li_style = {
 
 function Navigation(Props) {
   var links = Props.links;
-  var routerPrefixHackOpt = Props.routerPrefixHack;
-  var routerPrefixHack = routerPrefixHackOpt !== undefined ? routerPrefixHackOpt : "";
   return React.createElement("ul", {
               style: {
                 display: "block",
@@ -23,7 +21,6 @@ function Navigation(Props) {
                                 key: idx.toString(),
                                 style: ul_li_style
                               }, React.createElement(MyLink$RoutingExample.make, {
-                                    routerPrefixHack: routerPrefixHack,
                                     route: param[0],
                                     children: param[1]
                                   }));

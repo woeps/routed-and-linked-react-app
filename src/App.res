@@ -4,14 +4,14 @@
  *  - Area B
  */
 let links = [
-  (R.link(Main_Targets.root()), "Home"),
-  (R.link(Main_Targets.areaA(), ""), "Area A"),
-  (R.link(Main_Targets.areaB(), ""), "Area B"),
+  (MyRoutes.link(Main_Targets.root()), "Home"),
+  (MyRoutes.link(Main_Targets.areaA(), Routes.Parts.of_parts("")), "Area A"),
+  (MyRoutes.link(Main_Targets.areaB(), Routes.Parts.of_parts("")), "Area B"),
 ]
 @react.component
 let make = () => {
   <>
-    <h1> {React.string("Routing Experiment")} </h1>
+    <h1> {React.string("Routing Experiment - Detailed Wildcard")} </h1>
     <Navigation links />
     <Router routes=Main_Routes.routes />
   </>

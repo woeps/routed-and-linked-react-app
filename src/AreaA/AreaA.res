@@ -9,18 +9,16 @@
  *          - details
  */
 
-let links = [(R.link(AreaA_Targets.section1Overview()), "Section 1")]
+let links = [(MyRoutes.link(AreaA_Targets.section1Overview()), "Section 1")]
 
 @react.component
-let make = (~matchedPath: string, ~unmatchedPath: string) => {
+let make = () => {
   <>
     <h2>
-      {R.s("Area A[matchedPath=" ++ matchedPath ++ " | unmatchedPath=" ++ unmatchedPath ++ "]")}
+      {R.s("Area A")}
     </h2>
-    <Navigation links routerPrefixHack=matchedPath />
+    <Navigation links/>
     <Router
-      pathPrefix=matchedPath
-      path=unmatchedPath
       routes=AreaA_Routes.routes
       notFound={R.s("Please select a section in the menu.")}
     />

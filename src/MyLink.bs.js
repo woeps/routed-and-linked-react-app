@@ -2,15 +2,13 @@
 
 var React = require("react");
 var ReasonReactRouter = require("reason-react/src/ReasonReactRouter.bs.js");
-var Router$RoutingExample = require("./Router.bs.js");
+var MyLinkContextProvider$RoutingExample = require("./MyLinkContextProvider.bs.js");
 
 function MyLink(Props) {
-  var routerPrefixHackOpt = Props.routerPrefixHack;
   var route = Props.route;
   var children = Props.children;
-  var routerPrefixHack = routerPrefixHackOpt !== undefined ? routerPrefixHackOpt : "";
-  var routerContext = React.useContext(Router$RoutingExample.context);
-  var path = routerPrefixHack + routerContext.prefix + route;
+  var linkContext = React.useContext(MyLinkContextProvider$RoutingExample.context);
+  var path = linkContext.prefix + route;
   return React.createElement("a", {
               href: path,
               onClick: (function ($$event) {
