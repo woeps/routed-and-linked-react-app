@@ -1,4 +1,4 @@
-let route = R.link(AreaA_Targets.section1Details(), "someId")
+let route = MyRoutes.link(AreaA_Targets.section1Details(), "someId")
 @react.component
 let make = () => {
   <>
