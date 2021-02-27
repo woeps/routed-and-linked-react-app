@@ -22,8 +22,8 @@ let sub (children : React.element) parts =
                  (("/") ^
                     (Routes.Parts.prefix parts));
                path =
-                 ((("/")[@reason.raw_literal "/"]) ^
-                    (parts |. Routes.Parts.wildcard_match))
+                 (("/")) ^
+                    (Routes.Parts.wildcard_match parts)
              }
         ~children:children
         ()
